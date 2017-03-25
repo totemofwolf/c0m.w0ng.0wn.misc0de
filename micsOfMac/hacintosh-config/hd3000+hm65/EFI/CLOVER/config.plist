@@ -41,13 +41,7 @@
 			<dict>
 				<key>FIX_INTELGFX_100000</key>
 				<true/>
-				<key>FixLAN_2000</key>
-				<true/>
 				<key>FixRegions_10000000</key>
-				<true/>
-				<key>FixSBUS_0080</key>
-				<true/>
-				<key>FixUSB_1000</key>
 				<true/>
 				<key>NewWay_80000000</key>
 				<true/>
@@ -79,7 +73,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>slide=0 dart=0 darkwake=0 nv_disable=1 kext-dev-mode=1 rootless=0</string>
+		<string>slide=0 dart=0 darkwake=0 kext-dev-mode=1</string>
 		<key>CustomLogo</key>
 		<string>Theme</string>
 		<key>Debug</key>
@@ -125,6 +119,8 @@
 			<key>Inject</key>
 			<true/>
 		</dict>
+		<key>UseIntelHDMI</key>
+		<true/>
 	</dict>
 	<key>DisableDrivers</key>
 	<array>
@@ -135,8 +131,8 @@
 		<key>Hide</key>
 		<array>
 			<string>Document</string>
-			<string>Recovery HD</string>
 			<string>SoftPkgs</string>
+			<string>Recovery HD</string>
 		</array>
 		<key>Language</key>
 		<string>en:0</string>
@@ -213,148 +209,50 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Enable VGA&amp;HDMI</string>
+				<string>Patch_sound_assertions</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
 				<data>
-				AQIEABAHAAAQBwAABQMAAAIAAAAwAAAAAgUAAAAEAAAH
-				AAAAAwQAAAAEAAAJAAAABAYAAAAEAAAJAAAA
+				U291bmQgYXNzZXJ0aW9uIA==
 				</data>
 				<key>Name</key>
-				<string>com.apple.driver.AppleIntelSNBGraphicsFB</string>
+				<string>AppleHDAController</string>
 				<key>Replace</key>
 				<data>
-				AQIDABITAAASEwAABQMAAAIAAAAwAAAABgIAAAIAAAAw
-				AAAAAgUAAAAIAAAHAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAA==
 				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Zeroing 10ec0885 codec (patched by AppleHDA Patcher.app)</string>
+				<string>Enable Trim on SSD</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
 				<data>
-				hQjsEA==
+				AEFQUExFIFNTRAA=
+				</data>
+				<key>Name</key>
+				<string>IOAHCIBlockStorage</string>
+				<key>Replace</key>
+				<data>
+				AAAAAAAAAAAAAAA=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Zeroing 11d41983 codec (patched by AppleHDA Patcher.app)</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				gxnUEQ==
 				</data>
 				<key>Name</key>
 				<string>AppleHDA</string>
 				<key>Replace</key>
 				<data>
 				AAAAAA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Boot graphics glitch, (credit lisai9093, cecekpawon)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				AQAAdRc=
-				</data>
-				<key>Name</key>
-				<string>IOGraphicsFamily</string>
-				<key>Replace</key>
-				<data>
-				AQAA6xc=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Patch_sound_assertions</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				U291bmQgYXNzZXJ0aW9uIA==
-				</data>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>
-				AAAAAAAAAAAAAAAAAAAAAA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Wi-Fi Region 10.8.X for .cn</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				D7eH3AQAAA==
-				</data>
-				<key>Name</key>
-				<string>AirPortAtheros40</string>
-				<key>Replace</key>
-				<data>
-				uGQAAACQkA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>VRAM ENHANCE</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				x0W8AAAAIA==
-				</data>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelSNBGraphicsFB</string>
-				<key>Replace</key>
-				<data>
-				x0W8AAAAYA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Patch_sound_assertions</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				U291bmQgYXNzZXJ0aW9uIA==
-				</data>
-				<key>Name</key>
-				<string>AppleMikeyDriver</string>
-				<key>Replace</key>
-				<data>
-				AAAAAAAAAAAAAAAAAAAAAA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Patching 11d41984 with 10ec0662 codec (patched by AppleHDA Patcher.app)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				hBnUEQ==
-				</data>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>
-				YgbsEA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Fix AR9285</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				AABoDCo=
-				</data>
-				<key>Name</key>
-				<string>IO80211Family</string>
-				<key>Replace</key>
-				<data>
-				AABoDCs=
 				</data>
 			</dict>
 			<dict>
@@ -375,22 +273,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Patch_sound_assertions</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				U291bmQgYXNzZXJ0aW9uIA==
-				</data>
-				<key>Name</key>
-				<string>AppleHDAController</string>
-				<key>Replace</key>
-				<data>
-				AAAAAAAAAAAAAAAAAAAAAA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>Boot graphics glitch, 10.10.2 (1 of 3)</string>
 				<key>Disabled</key>
 				<false/>
@@ -407,12 +289,110 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Zeroing 11d41983 codec (patched by AppleHDA Patcher.app)</string>
+				<string>Boot graphics glitch, (credit lisai9093, cecekpawon)</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
 				<data>
-				gxnUEQ==
+				AQAAdRc=
+				</data>
+				<key>Name</key>
+				<string>IOGraphicsFamily</string>
+				<key>Replace</key>
+				<data>
+				AQAA6xc=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Patching 11d41984 with 10ec0662 codec (patched by AppleHDA Patcher.app)</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				hBnUEQ==
+				</data>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>
+				YgbsEA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Patch_sound_assertions</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				U291bmQgYXNzZXJ0aW9uIA==
+				</data>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>
+				AAAAAAAAAAAAAAAAAAAAAA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Fix AR9285</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				AABoDCo=
+				</data>
+				<key>Name</key>
+				<string>IO80211Family</string>
+				<key>Replace</key>
+				<data>
+				AABoDCs=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Enable VGA&amp;HDMI</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				AQIEABAHAAAQBwAABQMAAAIAAAAwAAAAAgUAAAAEAAAH
+				AAAAAwQAAAAEAAAJAAAABAYAAAAEAAAJAAAA
+				</data>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSNBGraphicsFB</string>
+				<key>Replace</key>
+				<data>
+				AQIDABITAAASEwAABQMAAAIAAAAwAAAABgIAAAIAAAAw
+				AAAAAgUAAAAIAAAHAAAAAAAAAAAAAAAAAAAA
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>VRAM ENHANCE</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				x0W8AAAAIA==
+				</data>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSNBGraphicsFB</string>
+				<key>Replace</key>
+				<data>
+				x0W8AAAAYA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Zeroing 10ec0885 codec (patched by AppleHDA Patcher.app)</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				hQjsEA==
 				</data>
 				<key>Name</key>
 				<string>AppleHDA</string>
@@ -423,18 +403,18 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Enable Trim on SSD</string>
+				<string>Patch_sound_assertions</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
 				<data>
-				AEFQUExFIFNTRAA=
+				U291bmQgYXNzZXJ0aW9uIA==
 				</data>
 				<key>Name</key>
-				<string>IOAHCIBlockStorage</string>
+				<string>AppleMikeyDriver</string>
 				<key>Replace</key>
 				<data>
-				AAAAAAAAAAAAAAA=
+				AAAAAAAAAAAAAAAAAAAAAA==
 				</data>
 			</dict>
 		</array>
@@ -448,43 +428,27 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
-		<key>BiosReleaseDate</key>
-		<string>04/22/13</string>
 		<key>BiosVendor</key>
-		<string>Apple Inc.</string>
-		<key>BiosVersion</key>
-		<string>MBP81.88Z.0047.B0E.1304221557</string>
-		<key>Board-ID</key>
-		<string>Mac-94245B3640C91C81</string>
-		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardType</key>
 		<integer>10</integer>
-		<key>ChassisAssetTag</key>
-		<string>MacBook-Aluminum</string>
-		<key>ChassisManufacturer</key>
-		<string>Apple Inc.</string>
-		<key>ChassisType</key>
-		<string>08</string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
-		<key>Manufacturer</key>
-		<string>Apple Inc.</string>
 		<key>Mobile</key>
 		<true/>
 		<key>ProductName</key>
 		<string>MacBookPro8,1</string>
 		<key>SerialNumber</key>
-		<string>C02GLLVLDH2G</string>
+		<string>C02GRUC7DV13</string>
 		<key>Trust</key>
 		<false/>
-		<key>Version</key>
-		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
+		<key>ExposeSysVariables</key>
+		<true/>
 		<key>InjectKexts</key>
-		<string>Detect</string>
+		<string>Yes</string>
 		<key>InjectSystemID</key>
 		<true/>
 	</dict>

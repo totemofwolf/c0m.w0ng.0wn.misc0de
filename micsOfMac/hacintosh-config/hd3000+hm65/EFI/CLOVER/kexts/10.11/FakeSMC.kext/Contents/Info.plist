@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>14A389</string>
+	<string>13D55</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
@@ -17,25 +17,25 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>6.11-285-gf024943.1613</string>
+	<string>6.8.1307</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1613</string>
+	<string>1307</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>6A1046a</string>
+	<string>5B1008</string>
 	<key>DTPlatformVersion</key>
 	<string>GM</string>
 	<key>DTSDKBuild</key>
-	<string>12D75</string>
+	<string>12F37</string>
 	<key>DTSDKName</key>
 	<string>macosx10.8</string>
 	<key>DTXcode</key>
-	<string>0610</string>
+	<string>0511</string>
 	<key>DTXcodeBuild</key>
-	<string>6A1046a</string>
+	<string>5B1008</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>FakeSMC</key>
@@ -71,23 +71,6 @@
 						<string>RPlt</string>
 						<string>ch8*</string>
 					</array>
-				</dict>
-				<key>ExceptionKeys</key>
-				<dict>
-					<key>CLKH</key>
-					<integer>1</integer>
-					<key>CLKT</key>
-					<integer>1</integer>
-					<key>MSDW</key>
-					<integer>1</integer>
-					<key>NATJ</key>
-					<integer>1</integer>
-					<key>NATi</key>
-					<integer>1</integer>
-					<key>NTOK</key>
-					<integer>1</integer>
-					<key>WKTP</key>
-					<integer>0</integer>
 				</dict>
 				<key>Keys</key>
 				<dict>
@@ -213,7 +196,7 @@
 				<key>debug</key>
 				<false/>
 				<key>smc-compatible</key>
-				<string>smc-huronriver</string>
+				<string>smc-napa</string>
 				<key>trace</key>
 				<false/>
 			</dict>
@@ -225,10 +208,6 @@
 			<string>AppleACPIPlatformExpert</string>
 			<key>IOResourceMatch</key>
 			<string>FakeSMCKeyStore</string>
-			<key>RM,Build</key>
-			<string>Release-RehabMan</string>
-			<key>RM,Version</key>
-			<string>FakeSMC 1613</string>
 		</dict>
 		<key>FakeSMCKeyStore</key>
 		<dict>
@@ -267,7 +246,5 @@
 	</dict>
 	<key>OSBundleRequired</key>
 	<string>Root</string>
-	<key>Source Code</key>
-	<string>"https://github.com/RehabMan/OS-X-FakeSMC-kozlek.git"</string>
 </dict>
 </plist>
