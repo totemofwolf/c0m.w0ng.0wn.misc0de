@@ -428,20 +428,38 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
-		<key>BiosVendor</key>
-		<string>Apple Inc.</string>
-		<key>BoardType</key>
-		<integer>10</integer>
-		<key>Family</key>
-		<string>MacBook Pro</string>
-		<key>Mobile</key>
-		<true/>
-		<key>ProductName</key>
-		<string>MacBookPro8,1</string>
-		<key>SerialNumber</key>
-		<string>C02GRUC7DV13</string>
-		<key>Trust</key>
-		<false/>
+    <key>BiosReleaseDate</key>
+    <string>04/22/13</string>
+    <key>BiosVendor</key>
+    <string>Apple Inc.</string>
+    <key>BiosVersion</key>
+    <string>MBP81.88Z.0047.B0E.1304221557</string>
+    <key>Board-ID</key>
+    <string>Mac-94245B3640C91C81</string>
+    <key>BoardManufacturer</key>
+    <string>Apple Inc.</string>
+    <key>BoardType</key>
+    <integer>10</integer>
+    <key>ChassisAssetTag</key>
+    <string>MacBook-Aluminum</string>
+    <key>ChassisManufacturer</key>
+    <string>Apple Inc.</string>
+    <key>ChassisType</key>
+    <string>08</string>
+    <key>Family</key>
+    <string>MacBook Pro</string>
+    <key>Manufacturer</key>
+    <string>Apple Inc.</string>
+    <key>Mobile</key>
+    <true/>
+    <key>ProductName</key>
+    <string>MacBookPro8,1</string>
+    <key>SerialNumber</key>
+    <string>C02GRUC7DV13</string>
+    <key>Trust</key>
+    <false/>
+    <key>Version</key>
+    <string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
